@@ -1,6 +1,193 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>    
+<script>
+$(document).ready(
+		function()
+		{  
+			var content = "<img src='iSalonImages/mainPage.png' usemap=#appclicks>";
+			content += "<map name=appclicks>";
+			content += "<area shape=rect coords=83,85,127,145 href='#' onclick='clientView();'>";
+			content += "<area shape=rect coords=203,85,259,139 href='#' onclick='schedulerView();'>";
+			content += "<area shape=rect coords=75,193,141,254 href='#' onclick='inventoryView();'>";
+			content += "<area shape=rect coords=192,189,273,253 href='#' onclick='shoppingListView();'>";
+			content += "<area shape=rect coords=81,309,130,369 href='#' onclick='settingsView();'>";
+			content += "<area shape=rect coords=218,310,269,369 href='#' onclick='analyticsView();'>";
+			content += "</map>";
+			$('#iPhone').html(content);
+		 	
+		});
+
+function homeView()
+{
+	var content = "<img src='iSalonImages/mainPage.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=83,85,127,145 href='#' onclick='clientView();'>";
+	content += "<area shape=rect coords=203,85,259,139 href='#' onclick='schedulerView();'>";
+	content += "<area shape=rect coords=75,193,141,254 href='#' onclick='inventoryView();'>";
+	content += "<area shape=rect coords=192,189,273,253 href='#' onclick='shoppingListView();'>";
+	content += "<area shape=rect coords=81,309,130,369 href='#' onclick='settingsView();'>";
+	content += "<area shape=rect coords=218,310,269,369 href='#' onclick='analyticsView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+}
+
+function clientView()
+	{
+		var content = "<img src='iSalonImages/clientSearch.png' usemap=#appclicks>";
+		content += "<map name=appclicks>";
+		content += "<area shape=rect coords=11,4,63,24 href='#' onclick='homeView();'>";
+		content += "<area shape=rect coords=283,3,307,21 href='#' onclick='editClientView();'>";
+		content += "</map>";
+		$('#iPhone').html(content);
+	
+	}
+
+function editClientView()
+{
+	var content = "<img src='iSalonImages/editClient.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=12,2,110,24 href='#' onclick='clientView();'>";
+	content += "<area shape=rect coords=238,4,313,23 href='#' onclick='schedulerView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+}
+
+function schedulerView()
+{
+	var content = "<img src='iSalonImages/scheduler.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=11,4,63,24 href='#' onclick='homeView();'>";
+	content += "<area shape=rect coords=274,3,299,20 href='#' onclick='addApptView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+}
+
+function addApptView()
+{
+	var content = "<img src='iSalonImages/addAppt.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=12,5,90,25 href='#' onclick='schedulerView();'>";
+	content += "<area shape=rect coords=237,5,314,24 href='#' onclick='schedulerView();'>";
+	content += "<area shape=rect coords=230,115,262,142 href='#' onclick='chooseServiceView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+}
+function chooseServiceView()
+{
+	var content = "<img src='iSalonImages/chooseService.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=5,3,124,24 href='#' onclick='addApptView();'>";
+	content += "<area shape=rect coords=252,3,315,22 href='#' onclick='addApptView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+}
+function inventoryView()
+{
+	var content = "<img src='iSalonImages/inventory.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=11,4,63,24 href='#' onclick='homeView();'>";
+	content += "<area shape=rect coords=238,3,302,21 href='#' onclick='scanView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+}
+function scanView()
+{
+	var content = "<img src='iSalonImages/scan.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=12,3,63,24 href='#' onclick='inventoryView();'>";
+	content += "<area shape=rect coords=77,207,157,242 href='#' onclick='scanInView();'>";
+	content += "<area shape=rect coords=169,208,252,241 href='#' onclick='scanOutView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+}
+function scanInView()
+{
+	var content = "<img src='iSalonImages/scanIn.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=11,2,62,24 href='#' onclick='scanView();'>";
+	content += "<area shape=rect coords=245,4,308,23 href='#' onclick='scanView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+}
+function scanOutView()
+{
+	var content = "<img src='iSalonImages/scanOut.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=14,4,63,26 href='#' onclick='scanView();'>";
+	content += "<area shape=rect coords=253,2,315,23 href='#' onclick='scanView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+}
+function shoppingListView()
+{
+	
+	var content = "<img src='iSalonImages/shoppingList.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=5,3,55,24 href='#' onclick='homeView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+	
+}
+function settingsView()
+{
+	var content = "<img src='iSalonImages/setting.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=34,129,303,155 href='#' onclick='settingsCalendarView();'>";
+	content += "<area shape=rect coords=35,185,303,210 href='#' onclick='settingsServicesView();'>";
+	content += "<area shape=rect coords=34,226,303,252 href='#' onclick='settingsShoppingView();'>";
+	content += "<area shape=rect coords=35,275,303,299 href='#' onclick='settingsAlertView();'>";
+	content += "<area shape=rect coords=109,349,231,420 href='#' onclick='homeView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);		
+}
+function settingsCalendarView()
+{
+	var content = "<img src='iSalonImages/settingsCalendar.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=9,1,77,23 href='#' onclick='settingsView();'>";
+	content += "<area shape=rect coords=250,2,313,21 href='#' onclick='settingsView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);	
+}
+function settingsServicesView()
+{
+	var content = "<img src='iSalonImages/settingsServices.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=9,1,77,23 href='#' onclick='settingsView();'>";
+	content += "<area shape=rect coords=250,2,313,21 href='#' onclick='settingsView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);	
+}
+
+function settingsShoppingView()
+{
+	var content = "<img src='iSalonImages/settingsShopping.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=9,1,77,23 href='#' onclick='settingsView();'>";
+	content += "<area shape=rect coords=250,2,313,21 href='#' onclick='settingsView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);	
+}
+function settingsAlertView()
+{
+	var content = "<img src='iSalonImages/alerts.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=9,1,77,23 href='#' onclick='settingsView();'>";
+	content += "<area shape=rect coords=250,2,313,21 href='#' onclick='settingsView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);	
+}
+function analyticsView()
+{
+	var content = "<img src='iSalonImages/analytics.png' usemap=#appclicks>";
+	content += "<map name=appclicks>";
+	content += "<area shape=rect coords=18,1,67,24 href='#' onclick='homeView();'>";
+	content += "</map>";
+	$('#iPhone').html(content);
+}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
@@ -9,6 +196,9 @@
 <a href="register.html">Register</a>
 <h1>CharkApps</h1>
 <h2>iSalon</h2>
+<div id="iPhone">
+</div>
+
 <p>This website is used to explore the iSalon application for the iPhone.</p>
 <p> Please register and give us feed back on iSalon.</p>
 
