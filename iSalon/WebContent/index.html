@@ -66,7 +66,7 @@ function editClientView()
 	content += "<area shape=rect coords="+coords(12,2,110,24)+" href='#' onclick='clientView();'>";
 	content += "<area shape=rect coords="+coords(238,4,313,23)+" href='#' onclick='schedulerView();'>";
 	content += "</map>";
-	$('#iPhone').html(content);
+	$.get('#iPhone').html(content);
 }
 
 function schedulerView()
@@ -246,12 +246,14 @@ function analyticsView()
  
 
  <div id="container">   <!-- Start Header --> 
+ <div id="icon"></div>
  <div id="header">  
 
  <div id="header-main">  <!-- Start Header Wrapper --> 
  <div class="wrapper">  
 
  <div class="intro"> 
+ 
   <p><span style="color:#9DE;">iSalon</span>
    is a stylist best friend. Easily manage all aspects of your business.</p><p> <span style="color:#9DE;">Explore</span> the app as it is being built with this live mockup demo. Actual screen shots will be placed as they get built. So tell use what you like and what you don't. 
    This app is being build just for you and we want to ensure that ALL your needs are met.</p>  
@@ -462,6 +464,7 @@ function analyticsView()
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
                   <!-- Start iPhone Mockup --> <div id="iphone"> 
                   <div id="iPhone" ></div>
+                  
                    <ul id="slides"> <li>
                    <img src="iSalonImages/mainPage.png" alt="Account screen" border="0" /></li> 
                    <li><img src="images/screens/skype.png" alt="Account screen" border="0" /></li>
