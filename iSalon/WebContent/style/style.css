@@ -72,8 +72,23 @@ button{
 	color:#555555;
 	cursor: pointer;
 }
-
-
+/*-----------------------------------------------------------------------------------*/
+/*	comment stuff
+/*-----------------------------------------------------------------------------------*/
+#commentArea{
+	position: absolute;
+	top: 92px;
+	margin-left: 200px;
+}
+#comments{
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	padding:5px 10px 6px;
+	cursor:pointer;
+	color:#000000;
+	margin-left: 30%;
+}
 .topWrap{
 	background:url('../images/leatherStitch.png') repeat-x bottom;
 	padding-top:20px;
@@ -242,6 +257,7 @@ h1.logo{
 #content{
 	padding-top: 180px;
 	margin-left: 25px;
+	font-size:20px;
 }
 
 #tabs{
