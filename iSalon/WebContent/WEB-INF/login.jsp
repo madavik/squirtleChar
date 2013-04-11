@@ -6,6 +6,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
+<link href="./style/style.css" rel="stylesheet" type="text/css">
 <title>Log In</title>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>    
 <script>
@@ -79,7 +80,38 @@ function Login()
 </head>
 
 <body>
-<h3>Please Log In</h3>
+<!-- Start Main Container -->
+<!-- TOP Section -->
+<div class="topStretch">
+	<div class="topWrap">
+		<div class="centerContainer">
+			<h2>iSalon</h2>
+			<span class="tagline">~ A CharkApps Production</span>
+
+			
+			<!-- SOCIAL ICONS START -->
+
+			<div class="buttons">
+				<!--<a href="#" title="charkApps"><img src="../images/iSalonIcon.png" width="27" height="26" border="0" alt="Follow me on Twitter!" /></a>-->
+				
+			</div>
+
+			<!-- SOCIAL ICONS END -->
+
+		</div> <!-- END CENTERCONTAINER -->
+	</div> <!-- END BARWRAP -->
+</div>
+<!-- END TOP Section -->
+ <div id="header">  
+
+ <div id="header-main">  <!-- Start Header Wrapper --> 
+ <div class="wrapper">  
+
+
+  
+<div id="commentArea">
+
+   <h3>Please Log In</h3>
 
 <p><span style="color:#ff0000" id="error"></span></p>
 
@@ -93,6 +125,13 @@ User name: <span id="name"></span><input type="text" name="username" id="usernam
  Password: <input type="password" name="password" id="password"><span style="color:#ff0000" id="errorP"></span><br/>
 <input type="submit" value="Log In" name = "login" onclick="Login()">
 
+</div>
+
+  
+     </div><!-- End Header Wrapper -->  </div> 
+
+</div><!-- End Header -->  
+		<div id="headerBottom"></div>
 
 
 </body>

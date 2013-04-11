@@ -53,9 +53,7 @@ public class Comment extends HttpServlet {
 		HttpServletRequest req = (HttpServletRequest) request;
 		Connection db = null;
 		
-		Object ob = req.getParameter("Submit");
-		
-		String blah = "";
+	
 		//if they hit the submit button need to insert text into the db
 		if (req.getParameter("Submit")!= null)
 		{
@@ -95,7 +93,7 @@ public class Comment extends HttpServlet {
 				
 				//then select all from comment join users and get out all names and comments
 				
-				String v = "Select U.LoginName, C.Text from Comments C LEFT OUTER JOIN Users U ON (C.Uid = U.Uid)";
+				String v = "Select U.LoginName, C.Text from {oj Comments C LEFT OUTER JOIN Users U ON (C.Uid = U.Uid)}";
 				PreparedStatement stm = db.prepareStatement(v);
 				ResultSet r = stm.executeQuery();
 				
@@ -103,7 +101,6 @@ public class Comment extends HttpServlet {
 				JSONArray names = new JSONArray();
 				JSONArray comment = new JSONArray();
 				JSONObject result = new JSONObject();
-				
 				if(r != null)
 				{
 					while( r.next() )
@@ -136,8 +133,6 @@ public class Comment extends HttpServlet {
 				catch (JSONException e) {
 					e.printStackTrace();
 				}
-				
-				
 					// Send back the result as an HTTP response
 					response.setContentType("application/json"); //make sure you set the type
 					response.getWriter().print(result);  //writes data directly to the network connection.
@@ -146,8 +141,8 @@ public class Comment extends HttpServlet {
 					db.close();
 					
 					
-					
 				}
+			
 				catch (Exception e) {
 					e.printStackTrace();
 					
@@ -156,7 +151,6 @@ public class Comment extends HttpServlet {
 				{
 					Utils.close(db);
 				}
-			
 			
 		}
 		//if not then just get all comments from the db to populate but verify that they are logged in first
@@ -167,7 +161,7 @@ public class Comment extends HttpServlet {
 			if (req.getSession().getAttribute("Name") == null)
 			{
 				//if they are not logged in then redirect to the login.jsp page
-				request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+				request.getRequestDispatcher("login.jsp").forward(request, response);
 				return;
 			}
 			// select all from comments join users and get out all names and comments

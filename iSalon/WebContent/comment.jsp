@@ -9,31 +9,34 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script> 
 <script>
 
+function getComments(id)
+{
+	
+	Submit = id;
+	$.get('Comment',{Submit: Submit, comment: $('#comment').val() }, populate);
+}
+
+
 // on load call a function that pulls all patrons names and card #'s
 //build a table based on what you get back
 $(document).ready(function(){
 	$.get('Comment', populate); //jquery with JSON and callback to js method
 });
-	
-//function getComments(){
-//	$.get('Comment', populate);
-//}
-
 
 
 // Populates the page with new data provided by the servlet
 function populate (result) {
-	
-	//$('#commentsList').empty(); //jquery syntax
+	$("#comment").val("");
+	$('#commentsList').empty(); //jquery syntax
 	var comments = "<tr><th>User Name</th><th>Comment</th></tr>";
+	 
 	for(var i = 0; i<result.names.length; i++)
 		{
-			comments += "<tr><td>" + result.names[i] +"</td><td>" + result.comment[i] + "</td></tr>";
+			comments += "<tr><td>" + result.names[i] +" : </td><td>" + result.comments[i] + "</td></tr>";
 		}
 	$('#commentsList').html(comments);
 	
 }
-
 
 </script>
 <title>Comments</title>
@@ -70,10 +73,10 @@ function populate (result) {
 
   
 <div id="commentArea">
-<form id="myForm" action = "Comment" method="post"> 
-   	<textarea name="comment" rows="10" cols="50"></textarea> 
-    <input type="submit" value="Submit" name = "Submit" /> 
-</form>
+
+   	<textarea name="comment" rows="10" cols="50" id="comment"></textarea> 
+    <input type="submit" value="Submit" name = "Submit" onclick="getComments('submit');" > 
+
 </div>
 
   
@@ -87,7 +90,7 @@ function populate (result) {
 </div>
 <div id="footer"></div>
 <div id="comments">
-<table  border = "1" id="commentsList"> <!---References a jquery method  --->
+<table  id="commentsList"> <!---References a jquery method  --->
 </table>
 
 </div>
