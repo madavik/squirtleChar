@@ -6,7 +6,38 @@
 <head>
 <link href="./style/style.css" rel="stylesheet" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script> 
+<script>
+
+// on load call a function that pulls all patrons names and card #'s
+//build a table based on what you get back
+$(document).ready(function(){
+	$.get('Comment', populate); //jquery with JSON and callback to js method
+});
+	
+//function getComments(){
+//	$.get('Comment', populate);
+//}
+
+
+
+// Populates the page with new data provided by the servlet
+function populate (result) {
+	
+	//$('#commentsList').empty(); //jquery syntax
+	var comments = "<tr><th>User Name</th><th>Comment</th></tr>";
+	for(var i = 0; i<result.names.length; i++)
+		{
+			comments += "<tr><td>" + result.names[i] +"</td><td>" + result.comment[i] + "</td></tr>";
+		}
+	$('#commentsList').html(comments);
+	
+}
+
+
+</script>
+<title>Comments</title>
+
 </head>
 <body>
 <!-- Start Main Container -->
@@ -22,7 +53,7 @@
 
 			<div class="buttons">
 				<!--<a href="#" title="charkApps"><img src="../images/iSalonIcon.png" width="27" height="26" border="0" alt="Follow me on Twitter!" /></a>-->
-				
+				<a href="Logout">Logout</a>
 			</div>
 
 			<!-- SOCIAL ICONS END -->
@@ -37,42 +68,28 @@
  <div class="wrapper">  
 
 
- 
- 
- 
- 
   
 <div id="commentArea">
-<form id="myForm" action="comment" method="post"> 
+<form id="myForm" action = "Comment" method="post"> 
    	<textarea name="comment" rows="10" cols="50"></textarea> 
-    <input type="submit" value="submit" /> 
+    <input type="submit" value="Submit" name = "Submit" /> 
 </form>
 </div>
 
-
-
-
   
-     
      </div><!-- End Header Wrapper -->  </div> 
     
       </div><!-- End Header -->  
 		<div id="headerBottom"></div>
 		
 <div id="comments">		
-<a href="index.html">HOME</a>
+<a href="Home">HOME</a>
 </div>
 <div id="footer"></div>
 <div id="comments">
-
-<table>
-<c:forEach items="${feedback}"  var="t" >
-        <tr>
-        	<td>${t.name}</td>
-          <td>${t.comment}</td> 
-       </tr>
-      </c:forEach>
+<table  border = "1" id="commentsList"> <!---References a jquery method  --->
 </table>
+
 </div>
 </body>
 </html>

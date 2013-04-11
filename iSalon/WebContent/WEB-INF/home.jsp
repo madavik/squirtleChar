@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -231,8 +233,7 @@ function analyticsView()
 
 			<div class="buttons">
 				<!--<a href="#" title="charkApps"><img src="../images/iSalonIcon.png" width="27" height="26" border="0" alt="Follow me on Twitter!" /></a>-->
-				<a href = "LoginHelper">Login</a>
-				<a href="RegisterHelper">register</a>
+				<a href = "Logout">Logout</a>
 			</div>
 
 			<!-- SOCIAL ICONS END -->
@@ -273,7 +274,7 @@ function analyticsView()
         <!-- Start Content Wrapper --> 
         <div id="content"> 
          
-         <!-- <a href="Comment">Feedback</a>- -->
+         <a href="CommentHelper">Feedback</a>
          
          
          <!--  INSIDE PANEL NEED TWO DIV CONTAINERS FOR FEATURES ONE LEFT ONE RIGHT -->

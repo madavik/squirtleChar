@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+    <!-- Specify a JDBC datasource -->
+  
+     
+      <Resource 
+     name="jdbc/myDB"
+     auth="Container"
+     type="javax.sql.DataSource" 
+     driverClassName="com.mysql.jdbc.Driver"
+     url="jdbc:mysql://atr.eng.utah.edu/ps10_ckeck"
+     username="ckeck" 
+     password="00599178"
+     maxActive="2"
+     maxIdle="1"
+     maxWait = "10000"
+     />
+    
+     
+ 
+</Context>

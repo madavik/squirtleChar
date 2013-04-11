@@ -1,13 +1,13 @@
-package servlets;
+package iSalon;
 
-public class commentObject {
+public class CommentObject {
 
 	private String name;
 	private String comment;
 	
 	
 	
-	public commentObject(String name, String comment)
+	public CommentObject(String name, String comment)
 	{
 		setName(name);
 		setComment(comment);
