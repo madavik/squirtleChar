@@ -15,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import db.Utils;
+import db.Helpers;
 
 /**
  * Servlet implementation class Register
@@ -56,8 +57,10 @@ public class Register extends HttpServlet {
 			// Open a connection
 			db = Utils.openConnection(this);
 			
+			
 			String name = req.getParameter("username");
-			String pw = req.getParameter("password");
+			String pw = Helpers.hash(req.getParameter("password"));
+		
 			
 			String query = "Insert into Users (LoginName, Password) values(?,?)";
 			PreparedStatement st = db.prepareStatement(query);

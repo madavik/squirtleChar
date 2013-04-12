@@ -20,22 +20,33 @@ function getComments(id)
 // on load call a function that pulls all patrons names and card #'s
 //build a table based on what you get back
 $(document).ready(function(){
-	$.get('Comment', populate); //jquery with JSON and callback to js method
+	if($('#admin') == null || $('#admin') == "")
+	{
+		$.get('Comment', populate); //jquery with JSON and callback to js method
+	}
+	else{
+		
+	}
 });
 
 
 // Populates the page with new data provided by the servlet
 function populate (result) {
-	$("#comment").val("");
-	$('#commentsList').empty(); //jquery syntax
-	var comments = "<tr><th>User Name</th><th>Comment</th></tr>";
-	 
-	for(var i = 0; i<result.names.length; i++)
+	if($('#admin') == null || $('#admin') == "")
 		{
-			comments += "<tr><td>" + result.names[i] +" : </td><td>" + result.comments[i] + "</td></tr>";
+			$("#comment").val("");
+			$('#commentsList').empty(); //jquery syntax
+			var comments = "<tr><th>User Name</th><th>Comment</th></tr>";
+	 
+			for(var i = 0; i<result.names.length; i++)
+				{
+				comments += "<tr><td>" + result.names[i] +" : </td><td>" + result.comments[i] + "</td></tr>";
+				}
+			$('#commentsList').html(comments);
 		}
-	$('#commentsList').html(comments);
-	
+	else{
+		
+	}
 }
 
 </script>

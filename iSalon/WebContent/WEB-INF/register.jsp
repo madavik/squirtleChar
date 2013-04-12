@@ -123,7 +123,7 @@ function register()
 
 User name: <span id="name"></span><input type="text" name="username" id="username"><span style="color:#ff0000" id="errorL"></span><br/>
  Password: <input type="password" name="password" id="password"><span style="color:#ff0000" id="errorP"></span><br/>
-<input type="submit" value="Log In" name = "login" onclick="register()">
+<input type="submit" value="Register" name = "login" onclick="register()">
 
 
 

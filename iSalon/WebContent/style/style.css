@@ -299,14 +299,14 @@ ul.bullets li{
 }
 
 .lower-list{
-	width: 800px;
+	width: 1200px;
 	height: 300px;
-	padding-upper: 250px;
+	padding-upper: 100px;
 }
  .upper-list{
  
- 	width: 800px;
- 	height: 250px;
+ 	width: 1200px;
+ 	height: 300px;
  }
 .features li{
 	margin: 0;
@@ -316,10 +316,10 @@ ul.bullets li{
 
 .features li{
 	font-size: 13px;
-	width: 220px;
+	width: 240px;
 	float: left;
-	margin-right: 40px;
-	padding-bottom: 40px;
+	margin-right: 50px;
+	padding-bottom: 50px;
 	line-height:20px;
 }
 

@@ -15,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import db.Utils;
+import db.Helpers;
 
 /**
  * Servlet implementation class Login
@@ -62,7 +63,7 @@ public class Login extends HttpServlet {
 			String query = "SELECT * FROM Users WHERE LoginName = ? AND Password = ?";
 			PreparedStatement st = db.prepareStatement(query);
 			st.setString(1, name);
-			st.setString(2, pw);
+			st.setString(2, iSalon.Helpers.hash(pw));
 			
 			ResultSet res = st.executeQuery();
 
