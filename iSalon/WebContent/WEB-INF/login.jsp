@@ -86,7 +86,7 @@ function Login()
 	<div class="topWrap">
 		<div class="centerContainer">
 			<h2>iSalon</h2>
-			<span class="tagline">~ A CharkApps Production</span>
+			<span class="tagline"></span>
 
 			
 			<!-- SOCIAL ICONS START -->
@@ -121,9 +121,9 @@ function Login()
 
 
 
-User name: <span id="name"></span><input type="text" name="username" id="username"><span style="color:#ff0000" id="errorL"></span><br/>
+User name: <span id="name"></span><input type="text" name="username" id="username"><span style="color:#ff0000" id="errorL"></span><br/><br/>
  Password: <input type="password" name="password" id="password"><span style="color:#ff0000" id="errorP"></span><br/>
-<input type="submit" value="Log In" name = "login" onclick="Login()">
+<br/><input type="submit" value="Log In" name = "login" onclick="Login()">
 
 </div>
 

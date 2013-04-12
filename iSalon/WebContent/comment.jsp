@@ -20,20 +20,14 @@ function getComments(id)
 // on load call a function that pulls all patrons names and card #'s
 //build a table based on what you get back
 $(document).ready(function(){
-	if($('#admin') == null || $('#admin') == "")
-	{
+
 		$.get('Comment', populate); //jquery with JSON and callback to js method
-	}
-	else{
-		
-	}
 });
 
 
 // Populates the page with new data provided by the servlet
 function populate (result) {
-	if($('#admin') == null || $('#admin') == "")
-		{
+
 			$("#comment").val("");
 			$('#commentsList').empty(); //jquery syntax
 			var comments = "<tr><th>User Name</th><th>Comment</th></tr>";
@@ -43,10 +37,7 @@ function populate (result) {
 				comments += "<tr><td>" + result.names[i] +" : </td><td>" + result.comments[i] + "</td></tr>";
 				}
 			$('#commentsList').html(comments);
-		}
-	else{
-		
-	}
+
 }
 
 </script>
@@ -60,7 +51,7 @@ function populate (result) {
 	<div class="topWrap">
 		<div class="centerContainer">
 			<h2>iSalon</h2>
-			<span class="tagline">~ A CharkApps Production</span>
+			<span class="tagline"></span>
 
 			
 			<!-- SOCIAL ICONS START -->

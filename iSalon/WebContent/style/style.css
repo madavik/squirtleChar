@@ -98,6 +98,7 @@ button{
 }
 
 .topStretch h2{
+	
 	font-size:32px;
 	font-weight: 700;
 	line-height: 48px;
@@ -105,15 +106,18 @@ button{
 	color:#000000;
 }
 .topStretch span.tagline{
+	
 	/*color:#999999;*/
-	line-height:48px;
+	line-height:45px;
 	padding-left:5px;
-	font-size:14px;
+	font-size:10px;
 	color:#000000;
 }
 
 .topStretch .buttons{
-	padding-top:14px;
+	margin-bottom:20px;
+	margin-left: 80%;
+	font-size:20px;
 }
 
 #header{
@@ -247,7 +251,7 @@ h1.logo{
 /*-----------------------------------------------------------------------------------*/
 
 .panel{
-	width:800px;
+	width:1000px;
 	overflow:hidden;
 }
 
@@ -299,14 +303,14 @@ ul.bullets li{
 }
 
 .lower-list{
-	width: 1200px;
-	height: 300px;
-	padding-upper: 100px;
+	width: 1000px;
+	height: 250px;
+	padding-upper: 60px;
 }
  .upper-list{
  
- 	width: 1200px;
- 	height: 300px;
+ 	width: 1000px;
+ 	height: 250px;
  }
 .features li{
 	margin: 0;
@@ -316,10 +320,10 @@ ul.bullets li{
 
 .features li{
 	font-size: 13px;
-	width: 240px;
+	width: 200px;
 	float: left;
-	margin-right: 50px;
-	padding-bottom: 50px;
+	margin-right: 80px;
+	padding-bottom: 10px;
 	line-height:20px;
 }
 

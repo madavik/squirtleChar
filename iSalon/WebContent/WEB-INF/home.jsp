@@ -226,7 +226,7 @@ function analyticsView()
 	<div class="topWrap">
 		<div class="centerContainer">
 			<h2>iSalon</h2>
-			<span class="tagline">~ A CharkApps Production</span>
+			<span class="tagline"></span>
 
 			
 			<!-- SOCIAL ICONS START -->
